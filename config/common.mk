@@ -94,7 +94,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/codex/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/codex/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/codex/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
+    vendor/codex/prebuilt/common/xbin/zipalign:system/xbin/zipalign \ \
+    vendor/codex/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/codex/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/codex/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
