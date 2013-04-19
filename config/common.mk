@@ -31,16 +31,16 @@ PRODUCT_PACKAGES += \
     DSPManager \
     DashClock \
     LiveWallpapers \
-    Launcher2 \
     LiveWallpapersPicker \
     PhotoTable \
     Torch \
     Superuser \
     su
 
-# prebuilts
+# codex
 PRODUCT_PACKAGES += \
     LatinIME \
+    Trebuchet \
     LockClock \
     PerformanceControl
 
@@ -83,10 +83,10 @@ PRODUCT_COPY_FILES += \
 # initd
 PRODUCT_COPY_FILES += \
     vendor/codex/prebuilt/common/etc/init.d/01cxbomb:system/etc/init.d/01cxbomb \
-    vendor/codex/prebuilt/common/etc/init.d/01cxkernel:system/etc/init.d/01cxkernel \
-    vendor/codex/prebuilt/common/etc/init.d/01cxsystem:system/etc/init.d/01cxsystem \
-    vendor/codex/prebuilt/common/etc/init.d/01cxfs:system/etc/init.d/01cxfs \
-    vendor/codex/prebuilt/common/etc/init.d/01cxzipalign:system/etc/init.d/01cxzipalign
+    vendor/codex/prebuilt/common/etc/init.d/02cxkernel:system/etc/init.d/02cxkernel \
+    vendor/codex/prebuilt/common/etc/init.d/99cxsystem:system/etc/init.d/99cxsystem \
+    vendor/codex/prebuilt/common/etc/init.d/05cxfs:system/etc/init.d/05cxfs \
+    vendor/codex/prebuilt/common/etc/init.d/91cxzipalign:system/etc/init.d/91cxzipalign
 
 # prebuilt
 PRODUCT_COPY_FILES += \
