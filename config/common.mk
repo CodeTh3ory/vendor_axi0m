@@ -31,7 +31,6 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     DSPManager \
     libcyanogen-dsp \
-    DashClock \
     LiveWallpapers \
     LiveWallpapersPicker \
     PhotoTable \
