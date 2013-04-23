@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/init.codex.rc:root/init.codex.rc
+    vendor/codex/prebuilt/common/etc/init.local.rc:root/init.local.rc
 
 # initd
 PRODUCT_COPY_FILES += \
