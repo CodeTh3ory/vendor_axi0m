@@ -3,3 +3,4 @@ add_lunch_combo codex_mako-userdebug
 add_lunch_combo codex_t0lte-userdebug
 add_lunch_combo codex_toro-userdebug
 add_lunch_combo codex_xt926-userdebug
+add_lunch_combo codex_d2vzw-userdebug
