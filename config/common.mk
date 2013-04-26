@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/init.local.rc:root/init.local.rc
+    vendor/codex/prebuilt/common/etc/init.codex.rc:root/init.codex.rc
 
 # initd
 PRODUCT_COPY_FILES += \
@@ -98,6 +98,11 @@ PRODUCT_COPY_FILES += \
     vendor/codex/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/codex/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+# nfc
+PRODUCT_COPY_FILES += \
+    vendor/codex/config/permissions/com.codex.android.xml:system/etc/permissions/com.codex.android.xml \
+    vendor/codex/config/permissions/com.codex.nfc.enhanced.xml:system/etc/permissions/com.codex.nfc.enhanced.xml
+
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -110,7 +115,7 @@ CODEX_VERSION_MINOR = 6
 ifeq ($(RELEASE),true)
     CODEX_VERSION := "CODEX-4.2.2-v"$(CODEX_VERSION_MAJOR).$(CODEX_VERSION_MINOR)
 else
-    CODEX_VERSION := "CODEX-4.2.2"-$(shell date +%0d%^b%Y-%H%M%S)
+    CODEX_VERSION := "CODEX-4.2.2"-$(shell date +%0d%^b%Y)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
