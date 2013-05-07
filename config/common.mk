@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Trebuchet \
     LockClock \
+    PermissionsManager \
     PerformanceControl
 
 # tools
