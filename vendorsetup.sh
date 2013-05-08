@@ -1,8 +1,5 @@
-add_lunch_combo codex_maguro-userdebug
-add_lunch_combo codex_mako-userdebug
-add_lunch_combo codex_t0lte-userdebug
-add_lunch_combo codex_toro-userdebug
-add_lunch_combo codex_xt926-userdebug
-add_lunch_combo codex_i605-userdebug
-add_lunch_combo codex_d2vzw-userdebug
-add_lunch_combo codex_d2tmo-userdebug
+add_lunch_combo axi0m_maguro-userdebug
+add_lunch_combo axi0m_mako-userdebug
+add_lunch_combo axi0m_toro-userdebug
+add_lunch_combo axi0m_xt926-userdebug
+add_lunch_combo axi0m_i605-userdebug

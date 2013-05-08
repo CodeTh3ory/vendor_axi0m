@@ -1,12 +1,12 @@
 # gps
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/gps.conf:system/etc/gps.conf
+    vendor/axi0m/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
 # spn
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
+    vendor/axi0m/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 # apns
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/axi0m/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 

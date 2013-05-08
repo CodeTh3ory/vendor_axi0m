@@ -2,7 +2,7 @@
 include frameworks/base/data/sounds/NewAudio.mk
 
 # common
-$(call inherit-product, vendor/codex/config/common.mk)
+$(call inherit-product, vendor/axi0m/config/common.mk)
 
 # bluetooth
 PRODUCT_COPY_FILES += \

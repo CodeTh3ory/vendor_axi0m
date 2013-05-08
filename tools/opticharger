@@ -13,7 +13,7 @@ QUIET=1
 BASE=`pwd`
 BRUTECRUSH="-brute"
 TMPDIR=/tmp/opticharge-$$
-. $ANDROID_BUILD_TOP/vendor/codex/tools/functions
+. $ANDROID_BUILD_TOP/vendor/axi0m/tools/functions
 
 if [ -z "$BRUTE_PNGCRUSH" ]
 then

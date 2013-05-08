@@ -1,7 +1,7 @@
 SUPERUSER_EMBEDDED := true
 
 # brand
-PRODUCT_BRAND ?= Codex
+PRODUCT_BRAND ?= Axi0m
 
 # overrides general
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -14,7 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
-# overrides codex
+# overrides axi0m
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.nocheckin=1 \
     debug.performance.tuning=1 \
@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# codex
+# axi0m
 PRODUCT_PACKAGES += \
     LatinIME \
     Trebuchet \
@@ -68,41 +68,41 @@ PRODUCT_PACKAGES += \
     start-ssh
 
 # themes
-include vendor/codex/config/theme_chooser.mk
+include vendor/axi0m/config/theme_chooser.mk
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/codex/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/codex/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/axi0m/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/axi0m/overlay/common
 
 # bin
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/axi0m/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/init.codex.rc:root/init.codex.rc
+    vendor/axi0m/prebuilt/common/etc/init.axi0m.rc:root/init.axi0m.rc
 
 # initd
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/init.d/01cxbomb:system/etc/init.d/01cxbomb \
-    vendor/codex/prebuilt/common/etc/init.d/02cxkernel:system/etc/init.d/02cxkernel \
-    vendor/codex/prebuilt/common/etc/init.d/99cxsystem:system/etc/init.d/99cxsystem \
-    vendor/codex/prebuilt/common/etc/init.d/05cxfs:system/etc/init.d/05cxfs \
-    vendor/codex/prebuilt/common/etc/init.d/91cxzipalign:system/etc/init.d/91cxzipalign
+    vendor/axi0m/prebuilt/common/etc/init.d/01cxbomb:system/etc/init.d/01bomb \
+    vendor/axi0m/prebuilt/common/etc/init.d/02cxkernel:system/etc/init.d/02kernel \
+    vendor/axi0m/prebuilt/common/etc/init.d/99cxsystem:system/etc/init.d/99system \
+    vendor/axi0m/prebuilt/common/etc/init.d/05cxfs:system/etc/init.d/05fs \
+    vendor/axi0m/prebuilt/common/etc/init.d/91cxzipalign:system/etc/init.d/91zipalign
 
 # prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/codex/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/codex/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
-    vendor/codex/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/codex/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/codex/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/axi0m/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/axi0m/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/axi0m/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
+    vendor/axi0m/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
+    vendor/axi0m/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/axi0m/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # nfc
 PRODUCT_COPY_FILES += \
-    vendor/codex/config/permissions/com.codex.android.xml:system/etc/permissions/com.codex.android.xml \
-    vendor/codex/config/permissions/com.codex.nfc.enhanced.xml:system/etc/permissions/com.codex.nfc.enhanced.xml
+    vendor/axi0m/config/permissions/com.axi0m.android.xml:system/etc/permissions/com.axi0m.android.xml \
+    vendor/axi0m/config/permissions/com.axi0m.nfc.enhanced.xml:system/etc/permissions/com.axi0m.nfc.enhanced.xml
 
 # sip/voip
 PRODUCT_COPY_FILES += \
@@ -110,14 +110,14 @@ PRODUCT_COPY_FILES += \
 
 # version
 RELEASE = false
-CODEX_VERSION_MAJOR = 1
-CODEX_VERSION_MINOR = 6
+AXI0M_VERSION_MAJOR = 1
+AXI0M_VERSION_MINOR = 6
 
 ifeq ($(RELEASE),true)
-    CODEX_VERSION := "CODEX-4.2.2-v"$(CODEX_VERSION_MAJOR).$(CODEX_VERSION_MINOR)
+    AXI0M_VERSION := "AXI0M-4.2.2-v"$(AXI0M_VERSION_MAJOR).$(AXI0M_VERSION_MINOR)
 else
-    CODEX_VERSION := "CODEX-4.2.2"-$(shell date +%0d%^b%Y)
+    AXI0M_VERSION := "AXI0M-4.2.2"-$(shell date +%0d%^b%Y)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.codex.version=$(CODEX_VERSION)
+  ro.axi0m.version=$(AXI0M_VERSION)
