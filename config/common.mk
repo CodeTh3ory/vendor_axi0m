@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     LockClock \
     PermissionsManager \
+    AXI0MWalls \
     PerformanceControl
 
 # tools
