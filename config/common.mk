@@ -1,5 +1,8 @@
 SUPERUSER_EMBEDDED := true
 
+# GCC 4.9 SaberMod Toolchain for AXI0M
+USE_SABERMOD_ANDROIDEABI_49 := true
+
 # brand
 PRODUCT_BRAND ?= Axi0m
 
