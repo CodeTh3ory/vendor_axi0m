@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     DSPManager \
     libcyanogen-dsp \
+    MusicFX \
     LiveWallpapers \
     LiveWallpapersPicker \
     PhotoTable \
