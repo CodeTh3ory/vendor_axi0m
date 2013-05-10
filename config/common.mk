@@ -17,6 +17,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # overrides axi0m
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.nocheckin=1 \
+    ro.max.fling_velocity=12000 \
+    ro.min.fling_velocity=8000 \
+    pm.sleep_mode=1 \
     debug.performance.tuning=1 \
     persist.sys.purgeable_assets=1 \
     ro.ril.disable.power.collapse=0 \
