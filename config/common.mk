@@ -3,6 +3,10 @@ SUPERUSER_EMBEDDED := true
 # brand
 PRODUCT_BRAND ?= Axi0m
 
+#u can haz root
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3
+
 # overrides general
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -27,6 +31,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     windowsmgr.max_events_per_sec=512 \
     dalvik.vm.dexopt-flags=m=y,v=n,o=v
+
+#exp
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.lockprof.threshold=850 \
+    persist.sys.purgeable_assets=1 \
+    persist.sys.use_dithering=0 \
+    dalvik.vm.verify-bytecode=false
 
 # packages
 PRODUCT_PACKAGES += \
