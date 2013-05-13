@@ -19,5 +19,10 @@ sysctl -w kernel.sched_child_runs_first=0
 sysctl -w kernel.threads-max=525810
 sysctl -w kernel.multi_threading=2
 
+#Cluster
+echo "8" > /proc/sys/vm/page-cluster;
+echo "10" > /proc/sys/fs/lease-break-time;
+echo "500,512000,64,2048" > /proc/sys/kernel/sem;
+
 # disable logger - (comment and reboot for logcat)
 rm /dev/log/main
