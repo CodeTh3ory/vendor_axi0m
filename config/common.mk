@@ -101,19 +101,10 @@ PRODUCT_COPY_FILES += \
 # initd
 PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/etc/init.d/01bomb:system/etc/init.d/01bomb \
+    vendor/axi0m/prebuilt/common/etc/init.d/05fs:system/etc/init.d/05fs \
     vendor/axi0m/prebuilt/common/etc/init.d/02kernel:system/etc/init.d/02kernel \
     vendor/axi0m/prebuilt/common/etc/init.d/99system:system/etc/init.d/99system \
     vendor/axi0m/prebuilt/common/etc/init.d/91zipalign:system/etc/init.d/91zipalign
-
-ifeq ($(TARGET_PRODUCT),axi0m_mako)
-PRODUCT_COPY_FILES += \
-    vendor/axi0m/prebuilt/common/etc/init.d/05fs:system/etc/init.d/05fs
-endif
-
-ifneq ($(filter axi0m_toro axi0m_toroplus_axi0m_maguro,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/axi0m/prebuilt/common/etc/init.d/05fstuna:system/etc/init.d/05fstuna
-endif
 
 # prebuilt
 PRODUCT_COPY_FILES += \
