@@ -28,16 +28,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.purgeable_assets=1 \
     ro.ril.disable.power.collapse=0 \
     ro.config.hw_fast_dormancy=1 \
-    dalvik.vm.execution-mode=int:jit \
     windowsmgr.max_events_per_sec=512 \
-    dalvik.vm.dexopt-flags=m=y,v=n,o=v
 
 #exp
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.lockprof.threshold=850 \
     persist.sys.purgeable_assets=1 \
     persist.sys.use_dithering=0 \
-    dalvik.vm.verify-bytecode=false
+
+#dalvik for all
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapmaxfree=16m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapstartsize=32m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heaputilization=0.75 \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.lockprof.threshold=850 \
+    dalvik.vm.verify-bytecode=false \
+    dalvik.vm.dexopt-flags=m=y,v=n,o=v
 
 # packages
 PRODUCT_PACKAGES += \
