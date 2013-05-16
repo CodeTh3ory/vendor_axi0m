@@ -35,18 +35,35 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.purgeable_assets=1 \
     persist.sys.use_dithering=0 \
 
-#dalvik for all
+#Dalvik non Tuna
+ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heapmaxfree=16m \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapstartsize=32m \
     dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heaputilization=0.75 \
+    dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.lockprof.threshold=850 \
     dalvik.vm.verify-bytecode=false \
     dalvik.vm.dexopt-flags=m=y,v=n,o=v
+endif
+
+# Axi0m tuna
+ifneq ($(filter axi0m_maguro axi0m_toro,$(TARGET_PRODUCT)),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapmaxfree=16m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapstartsize=32m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.lockprof.threshold=850 \
+    dalvik.vm.verify-bytecode=false \
+    dalvik.vm.dexopt-flags=m=y,v=n,o=v
+endif
 
 # packages
 PRODUCT_PACKAGES += \
