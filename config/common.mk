@@ -137,7 +137,6 @@ PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/axi0m/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/axi0m/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
-    vendor/axi0m/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
     vendor/axi0m/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/axi0m/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
@@ -149,6 +148,18 @@ PRODUCT_COPY_FILES += \
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Bootanimation 540
+ifneq ($(filter axi0m_toro axi0m_maguro axi0m_toroplus,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES += \
+    vendor/axi0m/prebuilt/common/media/540.zip:system/media/bootanimation.zip
+endif
+
+# Bootanimation 720
+ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),
+PRODUCT_COPY_FILES += \
+    vendor/axi0m/prebuilt/common/media/720.zip:system/media/bootanimation.zip
+endif
 
 # version
 RELEASE = false
