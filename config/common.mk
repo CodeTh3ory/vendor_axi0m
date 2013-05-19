@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Trebuchet \
     LockClock \
-    HALO \
     PermissionsManager \
     AXI0MWalls \
     PerformanceControl
