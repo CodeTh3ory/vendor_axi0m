@@ -156,7 +156,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Bootanimation 720
-ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),
+ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/media/720.zip:system/media/bootanimation.zip
 endif
