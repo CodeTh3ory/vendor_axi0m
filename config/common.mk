@@ -44,7 +44,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapstartsize=32m \
     dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.lockprof.threshold=850 \
     dalvik.vm.verify-bytecode=false \
@@ -59,7 +58,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapstartsize=32m \
     dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.lockprof.threshold=850 \
     dalvik.vm.verify-bytecode=false \
@@ -159,7 +157,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Bootanimation 720
-ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),
+ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/media/720.zip:system/media/bootanimation.zip
 endif
