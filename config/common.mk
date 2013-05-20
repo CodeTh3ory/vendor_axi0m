@@ -28,6 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.purgeable_assets=1 \
     ro.ril.disable.power.collapse=0 \
     ro.config.hw_fast_dormancy=1 \
+    persist.service.zram=1
     windowsmgr.max_events_per_sec=512 \
 
 #exp
@@ -118,6 +119,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/axi0m/overlay/common
 
 # bin
 PRODUCT_COPY_FILES += \
+    vendor/axi0m/prebuilt/common/bin/compcache:system/bin/compcache \
+    vendor/axi0m/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache \
     vendor/axi0m/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # etc
