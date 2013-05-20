@@ -28,13 +28,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.purgeable_assets=1 \
     ro.ril.disable.power.collapse=0 \
     ro.config.hw_fast_dormancy=1 \
+    windowsmgr.max_events_per_sec=1000 \
+    ro.zram.default=18 \
     persist.service.zram=1
-    windowsmgr.max_events_per_sec=512 \
 
-#exp
+
+#moar
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.purgeable_assets=1 \
-    persist.sys.use_dithering=0 \
+    persist.sys.strictmode.disable=1 \
+    debug.sf.hw = 1
+
+
+#usb
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.service.adb.enable=1 \
+     persist.sys.usb.config=mtp,adb 
+
 
 #Dalvik non Tuna
 ifneq ($(filter axi0m_mako axi0m_xt926,$(TARGET_PRODUCT)),)
