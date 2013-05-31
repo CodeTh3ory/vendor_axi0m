@@ -139,7 +139,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/etc/init.d/01bomb:system/etc/init.d/01bomb \
     vendor/axi0m/prebuilt/common/etc/init.d/05fs:system/etc/init.d/05fs \
-    vendor/axi0m/prebuilt/common/etc/init.d/02kernel:system/etc/init.d/02kernel \
     vendor/axi0m/prebuilt/common/etc/init.d/99system:system/etc/init.d/99system \
     vendor/axi0m/prebuilt/common/etc/init.d/91zipalign:system/etc/init.d/91zipalign
 
