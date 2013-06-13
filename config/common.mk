@@ -21,14 +21,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # overrides axi0m
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.nocheckin=1 \
+    ro.kernel.android.checkjni=0 \
+    ro.kernel.checkjni=0 \
     ro.max.fling_velocity=12000 \
     ro.min.fling_velocity=8000 \
     pm.sleep_mode=1 \
+    debug.sf.hw=1 \
+    persist.sys.ui.hw=1 \
     debug.performance.tuning=1 \
+    video.accelerate.hw=1 \
+    debug.egl.profiler=1 \
+    debug.egl.hw=1 \
+    debug.composition.type=gpu \
     persist.sys.purgeable_assets=1 \
     ro.ril.disable.power.collapse=0 \
     ro.config.hw_fast_dormancy=1 \
-    windowsmgr.max_events_per_sec=1000 \
+    windowsmgr.max_events_per_sec=512 \
+    profiler.force_disable_err_rpt=1 \
+    profiler.force_disable_ulog=1 \
+    ro.ril.enable.amr.wideband=1 \
     ro.zram.default=18 \
     persist.service.zram=1
 
@@ -94,7 +105,6 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     LockClock \
     PermissionsManager \
-    AXI0MWalls \
     PerformanceControl
 
 # tools
@@ -138,7 +148,6 @@ PRODUCT_COPY_FILES += \
 # initd
 PRODUCT_COPY_FILES += \
     vendor/axi0m/prebuilt/common/etc/init.d/01bomb:system/etc/init.d/01bomb \
-    vendor/axi0m/prebuilt/common/etc/init.d/05fs:system/etc/init.d/05fs \
     vendor/axi0m/prebuilt/common/etc/init.d/99system:system/etc/init.d/99system \
     vendor/axi0m/prebuilt/common/etc/init.d/91zipalign:system/etc/init.d/91zipalign
 
