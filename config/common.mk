@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     Trebuchet \
+    HALO \
     LockClock \
     PermissionsManager \
     PerformanceControl
